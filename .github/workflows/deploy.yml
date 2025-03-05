@@ -17,4 +17,10 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          folder: .  # Your build output folder
+          branch: gh-pages  # The branch the action should deploy to
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
           folder: . 
