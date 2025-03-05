@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Homepage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .section {
+            margin: 2rem 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .publication {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid #e9ecef;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .institute-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .institute-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ding Chen</h1>
+            <h1>陈 鼎</h1>
+            <p>PhD Student • College of Computer Science and Technology • Zhejiang University</p>
+            <div class="links">
+                <a href="desargues0527@gmail.com">Email</a>
+                <a href="./assets/cv-single-page.pdf">CV</a>
+                <a href="https://github.com/DesarguesC">GitHub</a>
+                <a href="https://scholar.google.com">Google Scholar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <img src="./assets/cd.jpg" alt="Ding Chen" class="profile-image">
+            <div>
+                <h2>About Me</h2>
+                <p>
+                    Write a brief introduction about yourself, your research interests, 
+                    and your academic background. This section should give visitors a 
+                    quick overview of who you are and what you do.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Artificial Intelligence 1</li>
+                <li>Image Synthesis 2</li>
+                <li>3D Reconstruction 3</li>
+                <li>Multimodal Learning 4</li>
+            </ul>
+        </section>
+
+        <!-- <section class="section">
+            <h2>Publications</h2>
+            <div class="publication">
+                <p>Author(s). (Year). Title of the paper. Journal Name, Volume(Issue), Pages.</p>
+            </div>
+            <div class="publication">
+                <p>Author(s). (Year). Title of the paper. Conference Name, Pages.</p>
+            </div>
+        </section> -->
+
+        <section class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. in Computer Science, Zhejiang University, 2025-Present</li>
+                <li>B.eng. in Computer Science, Hangzhou Dianzi University, 2021-2025</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Teaching (Tuition)</h2>
+            <ul>
+                <li><strong>Mathematics</strong>: Mathematical Analysis, Advanced Algebra, Advanced Mathematics, Linear Algebra</li>
+                <li><strong>Programming</strong>: C/C++, Golang(Echo Backend), Python, Java, SQL</li>
+                <li><strong>Artificial Intelligence Basics</strong>: Pytorch usage, Machine Learning, Deep Learning, Code Implementation, Paper Reproduction, etc.</li>
+                <li><strong>Acedamical Writings</strong>: EI/SCI/CCF</li>
+                <p>If you are interested in my teaching/tuition, just feel free to contact me!</p>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Honors and Awards</h2>
+            <ul>
+                <li>Zhejiang Higher Mathematics Competition, First Prize, 2023</li>
+                <li>China University Student Mathematics Competition, Second Prize, 2023</li>
+                <li>The Mathematical Contest in Modeling (MCM/ICM), Meritorious Winner, 2023</li>
+                <li>China International Student Innovation Competition, National Final Gold Award, 2023</li>
+                <li>China Student Service Outsourcing Competition, National Third Prize, 2023</li>
+                <li>Zhejiang Provincial Government Scholarship, 2023</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Internships</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li class="institute-item">
+                    <img src="./assets/logo/zju.png" alt="ZJU Logo" class="institute-icon">
+                    <span>State Key Laboratory of CAD&CG, Zhejiang University, Hangzhou, 2023.11-2024.03</span>
+                </li>
+                <li class="institute-item">
+                    <img src="./assets/logo/thu.png" alt="THU Logo" class="institute-icon">
+                    <span>Institute for AI Industry Research, Tsinghua University, Beijing, 2024.06-Present</span>
+                </li>
+                <li class="institute-item">
+                    <img src="./assets/logo/jiayidan.png" alt="JIAYIDAN Logo" class="institute-icon">
+                    <span>Hangzhou Jiayidan Technology Co., Hangzhou, 2024.11-2025.02</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html> 
