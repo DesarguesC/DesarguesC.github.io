@@ -6,11 +6,14 @@
     <title>Welcome to Ding Chen's Homepage ~</title>
     
     <!-- Add these favicon links -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/favicon-32x32.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-touch-icon.jpg">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
+        /* Add Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
         body {
             /* Option 1: Subtle gradient background */
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
@@ -19,7 +22,7 @@
             /* background-image: url('data:image/svg+xml,...'); */
             
             /* Keep existing body styles */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -74,15 +77,18 @@
             transform: translateY(-5px);
         }
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+        h1, h2 {
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 0.5rem;
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            margin-top: 10px;
         }
 
         .contact-info {
@@ -209,12 +215,21 @@
                 background-position: 0% 50%;
             }
         }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
     <!-- Add this as the first element in body -->
-    <div class="animated-background"></div>
-
+    <div id="particles-js"></div>
+    
     <div class="language-switcher">
         <a href="index-cn.html" class="language-btn">中文</a>
     </div>
@@ -330,5 +345,70 @@
             </ul>
         </section>
     </main>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#3498db'
+                },
+                opacity: {
+                    value: 0.2
+                },
+                size: {
+                    value: 3
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#3498db',
+                    opacity: 0.1,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 </html> 
