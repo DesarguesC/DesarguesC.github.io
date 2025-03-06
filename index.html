@@ -179,9 +179,42 @@
             backdrop-filter: blur(5px);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        /* Add this after your existing styles */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(
+                45deg,
+                #f3f4f6,
+                #e5e7eb,
+                #f3f4f6
+            );
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Add this as the first element in body -->
+    <div class="animated-background"></div>
+
     <div class="language-switcher">
         <a href="index-cn.html" class="language-btn">中文</a>
     </div>
