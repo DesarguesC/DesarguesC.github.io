@@ -12,6 +12,13 @@
     
     <style>
         body {
+            /* Option 1: Subtle gradient background */
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            
+            /* Option 2: Subtle pattern */
+            /* background-image: url('data:image/svg+xml,...'); */
+            
+            /* Keep existing body styles */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -26,10 +33,12 @@
         }
 
         header {
-            background-color: #f8f9fa;
+            background: rgba(248, 249, 250, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 2rem 0;
             text-align: center;
-            border-bottom: 2px solid #e9ecef;
         }
 
         .profile-section {
@@ -44,10 +53,25 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
         }
 
         .section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
             margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
         }
 
         h1 {
@@ -80,6 +104,7 @@
         .links a {
             color: #3498db;
             text-decoration: none;
+            transition: all 0.3s ease;
         }
 
         .links a:hover {
@@ -91,6 +116,14 @@
             align-items: center;
             gap: 1rem;
             margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .institute-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            padding: 10px;
         }
 
         .institute-icon {
@@ -107,16 +140,44 @@
 
         .language-btn {
             padding: 8px 16px;
-            background-color: #3498db;
+            background: rgba(52, 152, 219, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             text-decoration: none;
+            transition: all 0.3s ease;
         }
 
         .language-btn:hover {
             background-color: #2980b9;
+        }
+
+        /* Add smooth transitions for interactive elements */
+        .links a, .language-btn, .publication, .institute-item {
+            transition: all 0.3s ease;
+        }
+
+        /* Add subtle hover effects */
+        .institute-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        /* Add animation for profile image */
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Enhance buttons */
+        .language-btn {
+            background: rgba(52, 152, 219, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
